@@ -26,8 +26,8 @@ def context(browser):
     context = browser.new_context(
         user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
         record_video_dir="videos/",
-        viewport={"width": 375, "height": 812},
-        is_mobile=True,
+        viewport={"width": 1280, "height": 1024},
+        is_mobile=False,
         locale="en-US",
     )
     yield context

@@ -1,4 +1,4 @@
-class HomePageLocators:
+class BasePageLocators:
     """
     Locators for home page
     """
