@@ -13,7 +13,7 @@ class BasePage:
     def __init__(self, page):
         self.page = page
         self.url = Config.URL
-        self.logger = setup_logger(self.__class__.__name__, 'streamer_page.log')
+        self.logger = setup_logger(self.__class__.__name__, 'shopping_page.log')
 
     def go_to_site(self) -> None:
         """
