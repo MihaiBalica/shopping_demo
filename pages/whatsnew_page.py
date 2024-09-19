@@ -15,5 +15,7 @@ class WhatsNewPage(BasePage):
         self.new_luma_yoga = page.locator(WhatsNewLocators.NEW_LUMA_YOGA)
         self.whatever_day_brings = page.locator(WhatsNewLocators.WHATEVER_DAY_BRINGS)
         self.sense_of_renewal = page.locator(WhatsNewLocators.SENSE_OF_RENEWAL)
+        self.whatsnew_locator = page.locator(WhatsNewLocators.WHATS_NEW)
 
-
+    def wait_for_page_to_load(self):
+        self.wait_for_element(self.whatsnew_locator)

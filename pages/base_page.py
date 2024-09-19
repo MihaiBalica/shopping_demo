@@ -21,6 +21,13 @@ class BasePage:
         self.sale_locator = page.locator(BasePageLocators.SALE)
         self.training_locator = page.locator(BasePageLocators.TRAINING)
 
+    def wait_for_element(self, locator, state="visible", timeout=10000):
+        """
+        Wait for a specific locator to be in a given state
+        """
+        locator.wait_for(state=state, timeout=timeout)
+
+
     def go_to_site(self) -> None:
         """
         navigate to the site
@@ -35,3 +42,7 @@ class BasePage:
         """
         self.logger.info(f"Navigating to {self.whatsnew_locator}")
         self.whatsnew_locator.click()
+
+    def select_left_side_menu(self, genre: str, category: str):
+        menu_locator = self.page.locator(str(BasePageLocators.LEFT_SIDE_MENU_ENTRY).format(genre.lower(), category))
+        menu_locator.click()

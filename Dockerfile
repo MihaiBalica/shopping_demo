@@ -41,4 +41,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /usr/src/app/
 
 # Start the application
-CMD ["pytest", "test_demo_1.py"]
+CMD ["pytest", "tests"]
